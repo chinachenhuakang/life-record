@@ -2,12 +2,12 @@
  * @Author: Chen HuaKang
  * @Date: 2024-03-15 10:08:57
  * @LastEditors: Chen HuaKang
- * @LastEditTime: 2024-03-15 11:07:56
+ * @LastEditTime: 2024-03-15 11:15:34
  * @Description: https://nextjs.org/docs/pages/building-your-application/deploying/static-exports
  */
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  output: 'export',
   // images: {
   //   loader: 'custom',
   // },
