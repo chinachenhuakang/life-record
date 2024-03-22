@@ -1,3 +1,10 @@
+/*
+ * @Author: Chen HuaKang
+ * @Date: 2024-03-15 10:08:57
+ * @LastEditors: Chen HuaKang
+ * @LastEditTime: 2024-03-21 16:07:19
+ * @Description: 
+ */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -14,5 +21,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // require('@tailwindcss/forms')
+  ],
 };

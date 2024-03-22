@@ -1,8 +1,16 @@
+/*
+ * @Author: Chen HuaKang
+ * @Date: 2024-03-20 09:39:00
+ * @LastEditors: Chen HuaKang
+ * @LastEditTime: 2024-03-22 16:57:05
+ * @Description: 
+ */
 import menuData from './../data/menu'
 import Image from 'next/image';
 
 export default function menuList() {
   let menuList = menuData;
+  let test = undefined
   return (
     <div className=' w-full px-2'>
       {
@@ -13,6 +21,7 @@ export default function menuList() {
               src={menu.imageSrc}
               width={96}
               height={36}
+              alt={menu.menuName}
             />
             <div className='pt-2 pl-4 md:p-4 text-left md:text-left space-y-4'>
               <blockquote>

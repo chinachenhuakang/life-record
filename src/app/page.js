@@ -2,24 +2,36 @@
  * @Author: Chen HuaKang
  * @Date: 2024-03-15 10:08:57
  * @LastEditors: Chen HuaKang
- * @LastEditTime: 2024-03-20 10:07:35
- * @Description: 
+ * @LastEditTime: 2024-03-22 16:28:13
+ * @Description:
  */
 // import Image from "next/image";
-import Header from './components/Header'
-import Footer from './components/Footer'
-import MenuList from './menuList'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import TeamSections from './components/TeamSections';
+import FeatureSections from './components/FeatureSections';
+import ContactSections from './components/ContactSections';
+import MenuList from './menuList';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      {/* <div className=' w-full'>
+    <main className='min-h-screen'>
+      <div className=' w-full'>
         <Header />
       </div>
+      <div className=' w-full'>
+        <TeamSections />
+      </div>
+      <div className=' w-full'>
+        <FeatureSections />
+      </div>
+      {/* <div className=' w-full'>
+        <ContactSections />
+      </div> */}
       <div className=' block w-full'>
         <Footer />
-      </div> */}
-      <MenuList />
+      </div>
+      {/* <MenuList /> */}
     </main>
   );
 }
