@@ -2,14 +2,14 @@
  * @Author: Chen HuaKang
  * @Date: 2024-03-20 09:39:00
  * @LastEditors: Chen HuaKang
- * @LastEditTime: 2024-03-22 16:57:05
+ * @LastEditTime: 2024-03-25 17:20:22
  * @Description: 
  */
-import menuData from './../data/menu'
+import menusData from './../data/menu'
 import Image from 'next/image';
 
 export default function menuList() {
-  let menuList = menuData;
+  let menuList = menusData.menuData;
   let test = undefined
   return (
     <div className=' w-full px-2'>

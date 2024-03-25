@@ -2,7 +2,7 @@
  * @Author: Chen HuaKang
  * @Date: 2024-03-15 10:08:57
  * @LastEditors: Chen HuaKang
- * @LastEditTime: 2024-03-22 16:28:13
+ * @LastEditTime: 2024-03-25 14:11:15
  * @Description:
  */
 // import Image from "next/image";
@@ -13,7 +13,8 @@ import FeatureSections from './components/FeatureSections';
 import ContactSections from './components/ContactSections';
 import MenuList from './menuList';
 
-export default function Home() {
+export default function Home({ children }) {
+  console.log('children',children)
   return (
     <main className='min-h-screen'>
       <div className=' w-full'>
