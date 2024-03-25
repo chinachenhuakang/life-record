@@ -2,7 +2,7 @@
  * @Author: Chen HuaKang
  * @Date: 2024-03-18 13:43:57
  * @LastEditors: Chen HuaKang
- * @LastEditTime: 2024-03-25 17:27:19
+ * @LastEditTime: 2024-03-25 17:34:34
  * @Description:
  */
 
@@ -154,8 +154,8 @@ const Header = () => {
           <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
             Marketplace
           </a>
-          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
-            Company
+          <a href='/life-record/menu' className='text-sm font-semibold leading-6 text-gray-900'>
+            菜单
           </a>
         </Popover.Group>
         <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
