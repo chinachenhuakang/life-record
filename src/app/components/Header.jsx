@@ -2,7 +2,7 @@
  * @Author: Chen HuaKang
  * @Date: 2024-03-18 13:43:57
  * @LastEditors: Chen HuaKang
- * @LastEditTime: 2024-03-22 16:25:52
+ * @LastEditTime: 2024-03-25 17:27:19
  * @Description:
  */
 
@@ -228,10 +228,10 @@ const Header = () => {
                   Marketplace
                 </a>
                 <a
-                  href='#'
+                  href='/life-record/menu'
                   className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                 >
-                  Company
+                  菜单
                 </a>
               </div>
               <div className='py-6'>
