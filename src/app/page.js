@@ -14,7 +14,6 @@ import ContactSections from './components/ContactSections';
 import MenuList from './menuList';
 
 export default function Home({ children }) {
-  console.log('children',children)
   return (
     <main className='min-h-screen'>
       <div className=' w-full'>
