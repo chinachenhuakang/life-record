@@ -2,7 +2,7 @@
  * @Author: Chen HuaKang
  * @Date: 2024-03-18 13:43:57
  * @LastEditors: Chen HuaKang
- * @LastEditTime: 2024-03-25 17:34:34
+ * @LastEditTime: 2024-04-17 16:51:41
  * @Description:
  */
 
@@ -148,8 +148,8 @@ const Header = () => {
             </Transition>
           </Popover>
 
-          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
-            Features
+          <a href='/life-record/countdown' className='text-sm font-semibold leading-6 text-gray-900'>
+            时间记录
           </a>
           <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
             Marketplace
