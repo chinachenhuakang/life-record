@@ -2,7 +2,7 @@
  * @Author: Chen HuaKang
  * @Date: 2024-04-17 16:49:48
  * @LastEditors: Chen HuaKang
- * @LastEditTime: 2024-04-17 17:33:29
+ * @LastEditTime: 2024-04-22 17:12:35
  * @Description:
  */
 'use client';
@@ -16,9 +16,9 @@ function classNames(...classes) {
 }
 
 export default function Countdown() {
-  let oneDay = 86400000;
   const [countDay, setCountDay] = useState([]);
   const initData = () => {
+    let oneDay = 86400000;
     let newTime = new Date().getTime(),
       meetDay = (newTime - new Date('2024-2-4').getTime()) / oneDay,
       yiyiDay = Math.ceil(
@@ -56,7 +56,43 @@ export default function Countdown() {
     ]);
   };
   useEffect(() => {
-    initData();
+    // initData();
+    let oneDay = 86400000;
+    let newTime = new Date().getTime(),
+      meetDay = (newTime - new Date('2024-2-4').getTime()) / oneDay,
+      yiyiDay = Math.ceil(
+        (newTime - new Date(`${new Date().getFullYear()}-1-1`).getTime()) / oneDay
+      ),
+      wuyiDay = Math.ceil(
+        (newTime - new Date(`${new Date().getFullYear()}-5-1`).getTime()) / oneDay
+      ),
+      shiyiDay = Math.ceil(
+        (newTime - new Date(`${new Date().getFullYear()}-10-1`).getTime()) / oneDay
+      );
+    setCountDay([
+      { id: 1, name: '在一起', value: `第 ${Math.ceil(meetDay)} 天` },
+      {
+        id: 2,
+        name: '距离元旦',
+        value: `${yiyiDay < 0 ? '还有' : '过去'} ${
+          yiyiDay < 0 ? Math.abs(yiyiDay) + 1 : Math.abs(yiyiDay) - 1
+        } 天`,
+      },
+      {
+        id: 3,
+        name: '距离五一',
+        value: `${wuyiDay < 0 ? '还有' : '过去'} ${
+          wuyiDay < 0 ? Math.abs(wuyiDay) + 1 : Math.abs(wuyiDay) - 1
+        } 天`,
+      },
+      {
+        id: 4,
+        name: '距离十一',
+        value: `${shiyiDay < 0 ? '还有' : '过去'} ${
+          shiyiDay < 0 ? Math.abs(shiyiDay) + 1 : Math.abs(shiyiDay) - 1
+        } 天`,
+      },
+    ]);
     return () => {
       setCountDay([]);
     };

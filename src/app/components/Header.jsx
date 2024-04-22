@@ -2,7 +2,7 @@
  * @Author: Chen HuaKang
  * @Date: 2024-03-18 13:43:57
  * @LastEditors: Chen HuaKang
- * @LastEditTime: 2024-04-17 16:51:41
+ * @LastEditTime: 2024-04-22 11:30:23
  * @Description:
  */
 
@@ -216,10 +216,10 @@ const Header = () => {
                   )}
                 </Disclosure>
                 <a
-                  href='#'
+                  href='/life-record/countdown'
                   className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                 >
-                  Features
+                  时间记录
                 </a>
                 <a
                   href='#'
