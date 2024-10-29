@@ -2,10 +2,13 @@
 import { useState, useRef, useMemo } from 'react';
 
 const ShoppingList = () => {
+  if (typeof window !== 'undefined') {
+    // 客户端代码，可以安全使用localStorage
+    const storeProductList = JSON.parse(localStorage.getItem('productList'));
+    // ...
+  }
   const [textProdcut, setTextProdcut] = useState('');
-  const [productList, setProductList] = useState(
-    JSON.parse(localStorage.getItem('productList')) || []
-  );
+  const [productList, setProductList] = useState(storeProductList || []);
   const inputRef = useRef(null);
 
   const handleAddProduct = () => {
@@ -20,7 +23,7 @@ const ShoppingList = () => {
         },
         ...oldProductList,
       ];
-      localStorage.setItem('productList', JSON.stringify(result));
+      handelSetStoreProductList(result);
       return result;
     });
     setTextProdcut('');
@@ -34,13 +37,13 @@ const ShoppingList = () => {
       return item;
     });
     setProductList(result);
-    localStorage.setItem('productList', JSON.stringify(result));
+    handelSetStoreProductList(result);
   };
 
   const handleDeleteProduct = (index) => {
     const result = productList.splice(index, 1);
     setProductList(result);
-    localStorage.setItem('productList', JSON.stringify(result));
+    handelSetStoreProductList(result);
   };
 
   const handleChangeText = (event) => {
@@ -49,7 +52,13 @@ const ShoppingList = () => {
 
   const handleClearAll = () => {
     setProductList([]);
-    localStorage.setItem('productList', '[]');
+    handelSetStoreProductList([]);
+  };
+
+  const handelSetStoreProductList = (data) => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('productList', JSON.stringify(data));
+    }
   };
 
   const total = useMemo(() => productList?.length, [productList]);
