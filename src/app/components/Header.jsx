@@ -148,11 +148,17 @@ const Header = () => {
             </Transition>
           </Popover>
 
-          <a href='/life-record/countdown' className='text-sm font-semibold leading-6 text-gray-900'>
+          <a
+            href='/life-record/countdown'
+            className='text-sm font-semibold leading-6 text-gray-900'
+          >
             时间记录
           </a>
-          <a href='#' className='text-sm font-semibold leading-6 text-gray-900'>
-            Marketplace
+          <a
+            href='/life-record/shoppinglist'
+            className='text-sm font-semibold leading-6 text-gray-900'
+          >
+            购物清单栏
           </a>
           <a href='/life-record/menu' className='text-sm font-semibold leading-6 text-gray-900'>
             菜单
@@ -222,10 +228,10 @@ const Header = () => {
                   时间记录
                 </a>
                 <a
-                  href='#'
+                  href='/life-record/shoppinglist'
                   className='-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
                 >
-                  Marketplace
+                  购物清单栏
                 </a>
                 <a
                   href='/life-record/menu'
