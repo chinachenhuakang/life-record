@@ -2,9 +2,10 @@
 import { useState, useRef, useMemo } from 'react';
 
 const ShoppingList = () => {
+  let storeProductList = [];
   if (typeof window !== 'undefined') {
     // 客户端代码，可以安全使用localStorage
-    const storeProductList = JSON.parse(localStorage.getItem('productList'));
+    storeProductList = JSON.parse(localStorage.getItem('productList'));
     // ...
   }
   const [textProdcut, setTextProdcut] = useState('');
